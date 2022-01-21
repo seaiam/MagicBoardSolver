@@ -182,21 +182,25 @@ public class MagicBoardSolver {
                 case 1:
                 i=0;
                 j=0;
+                System.out.println("Starting at the upper left corner! ");
                 break;
 
                 case 2:
                 i=0;
                 j=size-1;
+                System.out.println("Starting at the upper right corner! ");
                 break;
 
                 case 3:
                 i=size-1;
                 j=0;
+                System.out.println("Starting at the lower left corner! ");
                 break;
 
                 case 4:
                 i=size-1;
                 j=size-1;
+                System.out.println("Starting at the lower right corner! ");
                 break;
             }
            
@@ -209,11 +213,11 @@ public class MagicBoardSolver {
             }
             switch(method){
                 case 0:
-                System.out.println("[RECURSIVELY] The board is solvable from the upper left corner: "+recursivelySolve(magicBoard, i, j));
+                System.out.println("[RECURSIVELY] The board is solvable: "+recursivelySolve(magicBoard, i, j));
                 break;
 
                 case 1:
-                System.out.println("[ITERATIVELY] The board is solvable from the upper left corner: "+iterativelySolve(magicBoard, i, j));
+                System.out.println("[ITERATIVELY] The board is solvable: "+iterativelySolve(magicBoard, i, j));
                 break;
             }
             
