@@ -1,0 +1,50 @@
+- Ask user what size d he wants the board to be from 5 to 20
+- Create a Board object with dimensions dxd. 
+    the values of each square can be from 0 to d-1
+    Assign only ONE value of 0
+    The board is made of BoardBox objects , which have a certain value from 0 to d-1 and an indicator of which adjacent boxes
+    were already explored.
+- Ask the user from which corner he wants to start the game
+
+
+
+ITERATIVE SOLUTION
+Using Stack
+Create a Stack of BoardBox objects
+Push the current cell into the Stack
+
+while the stack is not empty
+    pop the current cell
+    if current cell == goal cell , return true
+    
+    -If we can go south
+        set south visited
+        push current cell, push south cell
+    -If we can go East
+        set east visited
+        push current cell, push east cell
+    -If we can go west
+        set west visited
+        push current cell, push west cell
+    -If we can go north
+        set north visited
+        push current cell, push north cell
+
+return false 
+
+RECURSIVE SOLUTION
+-If 0 is found, return true
+-If we can go south
+    set south visited
+    if findZeroSouth() , return true;
+-If we can go East
+    set east visited
+    if findZeroEast(), return true
+-If we can go west
+    set west visited
+    if findZeroWest(), return true
+-If we can go north
+    set north visited
+    if findZeroNorth(), return true
+
+return false
